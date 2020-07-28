@@ -1,6 +1,5 @@
 #Random Forest
 
-#Assignment
 
 
 #About the data: 
@@ -80,12 +79,7 @@ pred_test <- predict(company_train_model,newdata = company_test_data)
 
 table(pred_test,company_test_data$sales_cat)
 
-#pred_test   No Yes
-#      No   119   1
-#      Yes   0  81
-
 mean(company_test_data$sales_cat == pred_test)
-## accuracy for this model is 100
 
 library(ggplot2)
 library(lattice)
@@ -144,21 +138,9 @@ company_data_RF1
 RF1_pred <- predict(company_data_RF1,company_train_data)
 confusionMatrix(RF1_pred,company_train_data$sales_cat)
 
-#        Reference
-#Prediction  No Yes
-#       No  117   0
-#       Yes   0  83
-
-#Accuracy : 1     
 
 ## Now will predict this values for test
 
 RF_pred_test <- predict(company_data_RF1,company_test_data)
 confusionMatrix(RF_pred_test,company_test_data$sales_cat)
 
-#        Reference
-# Prediction   No Yes
-#        No   119   0
-#        Yes    0  81
-
-#Accuracy : 1 
