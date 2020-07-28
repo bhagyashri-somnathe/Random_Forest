@@ -103,19 +103,7 @@ rf_train_fraud
 rf_pred <- predict(rf_train_fraud,fraud_train_data)
 confusionMatrix(rf_pred,fraud_train_data$risk_good)
 
-#         Reference
-#   Prediction Good Risky
-#       Good   230     0
-#       Risky    0    70
-
-#Accuracy : 1
 
 rf_test_fraud <- predict(rf_train_fraud,fraud_test_data)
 confusionMatrix(rf_test_fraud,fraud_test_data$risk_good)
 
-#       Reference
-# Prediction Good Risky
-#     Good   246     0
-#     Risky    0    54
-
-# Accuracy : 1
